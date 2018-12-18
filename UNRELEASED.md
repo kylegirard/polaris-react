@@ -6,6 +6,8 @@ Use [the changelog guidelines](https://git.io/polaris-changelog-guidelines) to f
 
 ### Breaking changes
 
+- Providing `Card.Section` title with a `JSX Element` will no longer wrap the title in a `Subheading` component. ([#781](https://github.com/Shopify/polaris-react/pull/781))
+
 ### New components
 
 ### Enhancements
@@ -19,6 +21,7 @@ Use [the changelog guidelines](https://git.io/polaris-changelog-guidelines) to f
 - Updated `Frame` layout and made `TopBar.UserMenu` visible on mobile ([#852](https://github.com/Shopify/polaris-react/pull/852))
 - Changed `Tabs` example to contain children so the `Panel` renders for accessibility ([#893](https://github.com/Shopify/polaris-react/pull/893))
 - Fixed timezone not being accounted for in `ResourceList` date filter control ([#710](https://github.com/Shopify/polaris-react/pull/710))
+- Update Card.Section to accept ReactNode as title ([#781](https://github.com/Shopify/polaris-react/pull/781))
 
 ### Documentation
 

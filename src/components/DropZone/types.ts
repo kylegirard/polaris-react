@@ -1,6 +1,12 @@
 export type DropZoneEvent = DragEvent | React.ChangeEvent<HTMLInputElement>;
 
+export enum Size {
+  ExtraLarge = 'extraLarge',
+  Large = 'large',
+  Medium = 'medium',
+  Small = 'small',
+}
 export interface DropZoneContext {
-  size: string;
+  width: string;
   type: string;
 }

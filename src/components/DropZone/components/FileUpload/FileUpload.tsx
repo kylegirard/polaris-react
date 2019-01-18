@@ -81,17 +81,17 @@ export class FileUpload extends React.Component<CombinedProps, State> {
 
   render() {
     const {
-      context: {size, type},
+      context: {width, type},
     } = this.props;
     const {actionTitle, actionHint} = this.state;
     const imageClasses = classNames(
       styles.Image,
-      size && size === 'extraLarge' && styles.sizeExtraLarge,
-      size && size === 'large' && styles.sizeLarge,
+      width && width === 'extraLarge' && styles.sizeExtraLarge,
+      width && width === 'large' && styles.sizeLarge,
     );
 
     const extraLargeView =
-      size === 'extraLarge' ? (
+      width === 'extraLarge' ? (
         <Stack vertical>
           {type === 'file' && (
             <img className={imageClasses} src={AssetFileUpload} alt="" />
@@ -105,7 +105,7 @@ export class FileUpload extends React.Component<CombinedProps, State> {
       ) : null;
 
     const largeView =
-      size === 'large' ? (
+      width === 'large' ? (
         <Stack vertical spacing="tight">
           {type === 'file' && (
             <img className={imageClasses} src={AssetFileUpload} alt="" />
@@ -121,7 +121,7 @@ export class FileUpload extends React.Component<CombinedProps, State> {
       ) : null;
 
     const mediumView =
-      size === 'medium' ? (
+      width === 'medium' ? (
         <Stack vertical spacing="tight">
           <Link>{actionTitle}</Link>
           <Caption>
@@ -131,7 +131,7 @@ export class FileUpload extends React.Component<CombinedProps, State> {
       ) : null;
 
     const smallView =
-      size === 'small' ? (
+      width === 'small' ? (
         <Stack vertical spacing="tight">
           <Icon source={IconDragDrop} color="inkLightest" />
         </Stack>
